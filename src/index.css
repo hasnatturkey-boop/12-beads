@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  h1, h2, h3, .font-title {
+    font-family: 'Cinzel', serif, system-ui;
+  }
+}
+
+/* Custom Board Wood and Felt Gradients */
+.bg-board-wood {
+  background: radial-gradient(circle at 50% 50%, #3e2723 0%, #27140e 70%, #170b07 100%);
+}
+
+.bg-board-brass {
+  background: radial-gradient(circle at 50% 50%, #2b251f 0%, #1e1913 70%, #100d09 100%);
+}
+
+.bg-board-slate {
+  background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 70%, #020617 100%);
+}
+
+.bg-board-emerald {
+  background: radial-gradient(circle at 50% 50%, #064e3b 0%, #022c22 70%, #021611 100%);
+}
+
+/* Bead 3D styling */
+.bead-shadow {
+  box-shadow: 0 8px 16px -2px rgba(0, 0, 0, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.4), inset 0 -4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.bead-shadow-active {
+  box-shadow: 0 0 20px 4px rgba(234, 179, 8, 0.8), 0 10px 20px rgba(0, 0, 0, 0.7), inset 0 2px 4px rgba(255, 255, 255, 0.6);
+}
+
+/* Wood grain subtle overlay */
+.wood-pattern {
+  background-image: radial-gradient(#d7ba89 0.75px, transparent 0.75px), radial-gradient(#a27a42 0.75px, #27140e 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  opacity: 0.08;
+}
+
+/* Animations */
+@keyframes pulse-subtle {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 1.8s infinite ease-in-out;
+}
+
+@keyframes bead-land {
+  0% { transform: scale(1.25); filter: brightness(1.3); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
+
+.animate-bead-land {
+  animation: bead-land 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

@@ -1,0 +1,6 @@
+{
+  "name": "12 BEADS BY HASNAT",
+  "description": "Play 12 Beads (12 Goti) online with friends via room code or against smart computer AI with 3 difficulty levels, real-time sync, chat, leaderboards, and daily challenges.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
